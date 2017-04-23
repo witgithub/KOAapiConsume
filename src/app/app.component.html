@@ -1,3 +1,24 @@
-<h1>
-  {{title}}
-</h1>
+<table>
+  <tr *ngFor="let user of users">
+    <td>{{user.company}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.surname}}</td>
+    <td>{{user.poionts}}</td>
+    <td></td>
+    <td><button (click)="deleteUser(user._id)">USUN</button></td>
+    <td><button (click)="editUser(user._id)">EDIT</button></td>
+    <td><button (click)="getUser(user._id)">UserInfo</button></td>
+  </tr>
+</table>
+
+<input [(ngModel)]="user.name">
+<input [(ngModel)]="user.surname">
+<input [(ngModel)]="user.poionts">
+
+<h5>{{user.name}}</h5>
+<h5>{{user.surname}}</h5>
+<h5>{{user.poionts}}</h5>
+
+<button (click)="save()">SAVE</button>
+
+<button (click)="log()">LOG</button>
