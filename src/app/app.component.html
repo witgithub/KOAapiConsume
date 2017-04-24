@@ -1,6 +1,10 @@
 <table>
+  <thead>
+    <td>Imię</td>
+    <td>Nazwisko</td>
+    <td>wiek</td>
+  </thead>
   <tr *ngFor="let user of users">
-    <td>{{user.company}}</td>
     <td>{{user.name}}</td>
     <td>{{user.surname}}</td>
     <td>{{user.poionts}}</td>
@@ -11,9 +15,9 @@
   </tr>
 </table>
 
-<input [(ngModel)]="user.name">
-<input [(ngModel)]="user.surname">
-<input [(ngModel)]="user.poionts">
+Imię <input [(ngModel)]="user.name">
+Nazwisko <input [(ngModel)]="user.surname">
+Wiek <input [(ngModel)]="user.poionts"> <button (click)="filter()">Filtruj</button>
 
 <h5>{{user.name}}</h5>
 <h5>{{user.surname}}</h5>

@@ -12,7 +12,7 @@ export class UsersService {
     private http: Http
   ) { }
 
-  getUsers( ) {
+  getUsers() {
     return this.http.get('http://localhost:3000/users')
           .map(res => res.json())
           .map((data: any) => {
